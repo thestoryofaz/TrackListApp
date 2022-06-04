@@ -3,6 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,6 +24,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="y3T-AM-U4H" kind="show" id="fqR-0y-Dcb"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -35,6 +39,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="URj-9J-sgX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-143" y="-391"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="Eg0-Od-Dbh">
+            <objects>
+                <viewController id="y3T-AM-U4H" customClass="DetailViewController" customModule="TrackListApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OCS-yc-Tm5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ldV-tg-gIh">
+                                <rect key="frame" x="67" y="84" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="da0-Le-zUU"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UtV-lI-9ag">
+                                <rect key="frame" x="67" y="374" width="240" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UmP-rU-Czc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ldV-tg-gIh" firstAttribute="leading" secondItem="UmP-rU-Czc" secondAttribute="leading" constant="67" id="1KV-GT-RXA"/>
+                            <constraint firstItem="UmP-rU-Czc" firstAttribute="trailing" secondItem="ldV-tg-gIh" secondAttribute="trailing" constant="68" id="6Rg-73-JW7"/>
+                            <constraint firstItem="ldV-tg-gIh" firstAttribute="top" secondItem="UmP-rU-Czc" secondAttribute="top" constant="40" id="Bf1-l1-HJ9"/>
+                            <constraint firstItem="UtV-lI-9ag" firstAttribute="leading" secondItem="UmP-rU-Czc" secondAttribute="leading" constant="67" id="HcX-Zv-VeM"/>
+                            <constraint firstItem="UmP-rU-Czc" firstAttribute="trailing" secondItem="UtV-lI-9ag" secondAttribute="trailing" constant="68" id="WYf-o3-2z0"/>
+                            <constraint firstItem="UtV-lI-9ag" firstAttribute="top" secondItem="ldV-tg-gIh" secondAttribute="bottom" constant="50" id="rIo-pr-hFl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="STI-Az-w6K"/>
+                    <connections>
+                        <outlet property="imageView" destination="ldV-tg-gIh" id="c3j-Eq-uXb"/>
+                        <outlet property="trackNameLabel" destination="UtV-lI-9ag" id="biL-G8-In0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lHi-23-Zd1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="573.60000000000002" y="-398.05097451274366"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iMh-X3-Waq">
